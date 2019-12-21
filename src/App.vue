@@ -9,6 +9,11 @@
 import HelloWorld from './components/HelloWorld.vue'
 
 export default {
+  mounted () {
+    this.axios.get('api/list').then((res) => {
+      console.log(res)
+    })
+  },
   name: 'app',
   components: {
     HelloWorld
